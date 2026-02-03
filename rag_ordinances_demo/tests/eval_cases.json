@@ -1,0 +1,77 @@
+{
+  "description": "Evaluation test cases for RAG compliance demo",
+  "cases": [
+    {
+      "id": "sd_hoa1_fence_height",
+      "city": "san_diego",
+      "hoa": "demo_hoa_1",
+      "question": "Can I build a 6-foot fence in my backyard?",
+      "must_cite": ["§142.0520", "Section 7.1"],
+      "must_not_cite": ["SEC.12.22.A.3", "Section 5.2"],
+      "notes": "Should cite both city and HOA height regulations"
+    },
+    {
+      "id": "sd_hoa1_front_fence",
+      "city": "san_diego",
+      "hoa": "demo_hoa_1",
+      "question": "What type of fence can I put in my front yard?",
+      "must_cite": ["§142.0520", "Section 7.2"],
+      "must_not_cite": ["SEC.12.22.A.3"],
+      "notes": "Should mention height limits and HOA style requirements"
+    },
+    {
+      "id": "sd_hoa1_materials",
+      "city": "san_diego",
+      "hoa": "demo_hoa_1",
+      "question": "Can I use chain link fencing?",
+      "must_cite": ["Section 7.2"],
+      "must_not_cite": ["Section 5.3"],
+      "notes": "HOA prohibits chain link; city allows it"
+    },
+    {
+      "id": "sd_hoa1_permit",
+      "city": "san_diego",
+      "hoa": "demo_hoa_1",
+      "question": "Do I need a permit to build a fence?",
+      "must_cite": ["§142.0540", "Section 7.4"],
+      "must_not_cite": ["SEC.12.22.A.6"],
+      "notes": "Should cover both city permit and HOA approval"
+    },
+    {
+      "id": "la_hoa2_fence_height",
+      "city": "los_angeles",
+      "hoa": "demo_hoa_2",
+      "question": "What is the maximum fence height allowed in my backyard?",
+      "must_cite": ["SEC.12.22.A.3", "Section 5.2"],
+      "must_not_cite": ["§142.0520", "Section 7.1"],
+      "notes": "Must use LA ordinance and demo_hoa_2, not San Diego"
+    },
+    {
+      "id": "la_hoa2_materials",
+      "city": "los_angeles",
+      "hoa": "demo_hoa_2",
+      "question": "What fence materials are prohibited?",
+      "must_cite": ["SEC.12.22.A.5", "Section 5.3"],
+      "must_not_cite": ["§142.0530", "Section 7.2"],
+      "notes": "Should cite LA and HOA2 material requirements"
+    },
+    {
+      "id": "sd_hoa2_fence_color",
+      "city": "san_diego",
+      "hoa": "demo_hoa_2",
+      "question": "What colors can I paint my fence?",
+      "must_cite": ["Section 5.4"],
+      "must_not_cite": ["Section 7.3"],
+      "notes": "San Diego city + HOA2 - should not cite HOA1 colors"
+    },
+    {
+      "id": "la_hoa1_pool_fence",
+      "city": "los_angeles",
+      "hoa": "demo_hoa_1",
+      "question": "What are the requirements for a pool fence?",
+      "must_cite": ["SEC.12.22.A.7"],
+      "must_not_cite": ["§142.0520"],
+      "notes": "LA has specific pool fence section; tests city switching"
+    }
+  ]
+}
